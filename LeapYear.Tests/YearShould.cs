@@ -22,5 +22,12 @@ namespace LeapYear.Tests
         {
             Assert.False(LeapYear.Calculate(year));
         }
+        
+        [Fact]
+        public void ReturnsTrueIfYearIsDivisibleBy4ButNotBy100()
+        {
+            Assert.True(LeapYear.Calculate(40));
+        }
+        
     }
 }
