@@ -6,11 +6,11 @@ namespace LeapYear
     {
         public static bool Calculate(int year)
         {
-            if (year % 400 == 0 || (year % 4 == 0 && year % 100 != 0))
-                return true;
-            if ( year % 4 != 0 || (year % 400 == 0 && year % 100 != 0))
-                return false;
-            return false;
+            bool yearIsDivisibleBy4 = year % 4 == 0;
+            bool yearIsDivisibleBy100 = year % 100 == 0;
+            bool yearIsDivisibleBy400 = year % 400 == 0;
+
+            return (yearIsDivisibleBy4 && (!yearIsDivisibleBy100 || yearIsDivisibleBy400));
         }
     }
 }
