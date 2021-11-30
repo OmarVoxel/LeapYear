@@ -11,7 +11,7 @@ namespace LeapYear.Tests
         [InlineData(6000)]
         public void ReturnsTrueIfYearIsDivisibleBy400(int year)
         {
-            Assert.True(LeapYear.Calculate(year));
+            Assert.True(LeapYear.IsLeapYear(year));
         }
         
         [Theory]
@@ -20,7 +20,7 @@ namespace LeapYear.Tests
         [InlineData(100)]
         public void ReturnsFalseIfYearIsDivisibleBy100ButNotBy400(int year)
         {
-            Assert.False(LeapYear.Calculate(year));
+            Assert.False(LeapYear.IsLeapYear(year));
         }
         
         [Theory]
@@ -29,7 +29,7 @@ namespace LeapYear.Tests
         [InlineData(4)]
         public void ReturnsTrueIfYearIsDivisibleBy4ButNotBy100(int year)
         {
-            Assert.True(LeapYear.Calculate(year));
+            Assert.True(LeapYear.IsLeapYear(year));
         }
         
         [Theory]
@@ -38,7 +38,7 @@ namespace LeapYear.Tests
         [InlineData(10)]
         public void ReturnsFalseIfYearIsntDivisibleBy4(int year)
         {
-            Assert.False(LeapYear.Calculate(year));
+            Assert.False(LeapYear.IsLeapYear(year));
         }
 
         
