@@ -38,7 +38,7 @@ namespace LeapYear.Tests
         [InlineData(10)]
         public void ReturnsFalseIfYearIsntDivisibleBy4(int year)
         {
-            Assert.True(LeapYear.Calculate(year));
+            Assert.False(LeapYear.Calculate(year));
         }
 
         
