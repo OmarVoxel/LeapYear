@@ -5,10 +5,12 @@ namespace LeapYear.Tests
 {
     public class YearShould
     {
-        [Fact]
-        public void ReturnsTrueIfYearIsDivisibleBy400()
+        [Theory]
+        [InlineData(2000)]
+        [InlineData(4000)]
+        public void ReturnsTrueIfYearIsDivisibleBy400(int year)
         {
-            Assert.True(LeapYear.Calculate(2000));
+            Assert.True(LeapYear.Calculate(year));
         }
     }
 }
