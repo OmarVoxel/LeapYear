@@ -32,5 +32,15 @@ namespace LeapYear.Tests
             Assert.True(LeapYear.Calculate(year));
         }
         
+        [Theory]
+        [InlineData(5)]
+        [InlineData(9)]
+        [InlineData(10)]
+        public void ReturnsFalseIfYearIsntDivisibleBy4(int year)
+        {
+            Assert.True(LeapYear.Calculate(year));
+        }
+
+        
     }
 }
